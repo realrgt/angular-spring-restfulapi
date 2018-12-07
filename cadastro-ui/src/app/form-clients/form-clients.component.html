@@ -1,0 +1,45 @@
+<div class="card my-5">
+
+  <div class="card-header">
+    <span class="float-left">
+      <h4>Cliente</h4>
+    </span>
+  </div>
+
+  <div class="card-body mb-3">
+
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-sm-12 col-md-10 col-lg-9">
+
+          <form [formGroup]="clientForm">
+
+            <div class="form-row">
+
+              <div class="form-group col-12">
+                <label for="id">Id</label>
+                <input type="text" class="form-control" id="id" placeholder="Auto generated" formControlName="id">
+              </div>
+              <div class="form-group col-12">
+                <label for="name">Nome</label>
+                <input type="text" class="form-control" id="name" placeholder="Nome" formControlName="name">
+              </div>
+              <div class="form-group col-12">
+                <label for="surname">Sobrenome</label>
+                <input type="text" class="form-control" id="surname" placeholder="Sobrenome" formControlName="surname">
+              </div>
+            </div>
+
+              <div class="form-group mt-2">
+                <button class="btn btn-secondary" (click)="onSubmit()" >SUBMIT</button>
+              </div>
+
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>

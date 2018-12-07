@@ -1,0 +1,38 @@
+
+<div class="card mt-5">
+  <div class="card-header">
+    <div class="float-left">
+      <h4>Clientes</h4>
+    </div>
+    <div class="float-right">
+      <button type="button" class="btn btn-danger" [routerLink]="['form']" (click)="onNewClient()" >Novo Curso</button>
+    </div>
+  </div>
+  <div class="card-body mb-1">
+    <table class="table table-hover">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nome</th>
+          <th scope="col">Sobrenome</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let client of clients">
+          <th scope="row">{{ client.id }}</th>
+          <td>{{ client.name }}</td>
+          <td>{{ client.surname }}</td>
+          <td>
+            <span class="float-right">
+              <button class="btn btn-outline-warning mb-1 btn-sm" (click)="onUpdate(client)">Atualizar</button>
+              <!-- {{ ' ' }} -->
+              <button class="btn btn-outline-danger mb-1 btn-sm" (click)="onRemove(client)">Remover</button>
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>

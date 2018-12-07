@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-danger">
+  <div class="container">
+
+    <a class="navbar-brand" routerLink="/home">Clientes</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#closeNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="closeNav">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" routerLink="/list">Listagem</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active" routerLink="/form">Formulario</a>
+          </li>
+        </ul>
+    </div>
+
+  </div>
+</nav>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
